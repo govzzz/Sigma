@@ -1,0 +1,11 @@
+# This repo's deployable site is the Sigma plugin in normal-distribution-3d/.
+# Used when Netlify's "Base directory" is the repo root: `base` redirects the
+# build into the subfolder; `command` and `publish` are resolved relative to it.
+[build]
+  base = "normal-distribution-3d"
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Vite 7 requires Node >= 20.19 / 22.12.
+  NODE_VERSION = "22"

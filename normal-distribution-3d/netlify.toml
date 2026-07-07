@@ -1,0 +1,10 @@
+# Netlify build config for this Vite plugin.
+# Used when Netlify's "Base directory" points at this folder (publish is
+# resolved relative to the base directory).
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Vite 7 requires Node >= 20.19 / 22.12; pin to a version that satisfies it.
+  NODE_VERSION = "22"
