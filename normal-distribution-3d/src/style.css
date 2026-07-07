@@ -1,0 +1,83 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f7f8fa;
+}
+
+#app {
+  position: fixed;
+  inset: 0;
+}
+
+#app canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* One-finger drag rotates on touch devices instead of scrolling. */
+  touch-action: none;
+}
+
+#overlay {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  max-width: 280px;
+  padding: 10px 12px;
+  pointer-events: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #1f2937;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(4px);
+}
+
+#overlay:empty {
+  display: none;
+}
+
+.axis-tick,
+.axis-title {
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #334155;
+  /* White halo so labels stay legible over any part of the surface. */
+  text-shadow:
+    0 0 3px rgba(247, 248, 250, 0.95),
+    0 1px 2px rgba(247, 248, 250, 0.95);
+}
+
+.axis-tick {
+  font-size: 10px;
+}
+
+.axis-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+#overlay .title {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+#overlay .range {
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+#overlay .note {
+  color: #6b7280;
+  font-style: italic;
+  margin-top: 6px;
+}

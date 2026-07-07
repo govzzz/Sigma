@@ -1,0 +1,21 @@
+{
+  "name": "normal-distribution-3d",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@sigmacomputing/plugin": "1.2.0",
+    "react": "19.2.7",
+    "three": "0.184.0"
+  },
+  "devDependencies": {
+    "@types/three": "0.184.1",
+    "typescript": "5.9.3",
+    "vite": "7.3.5"
+  }
+}
